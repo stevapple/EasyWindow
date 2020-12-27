@@ -16,7 +16,10 @@ let package = Package(
             dependencies: [],
             path: "EasyWindow 4.0",
             exclude: ["EasyWindow 4.0.vcxitems"],
-            publicHeadersPath: "EasyWindow 4.0\\EasyWindow.h"
+            linkerSettings: [
+                .linkedLibrary("user32"),
+                .linkedLibrary("msimg32")
+            ]
         )
     ]
 )
